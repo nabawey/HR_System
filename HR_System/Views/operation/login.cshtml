@@ -1,0 +1,95 @@
+﻿@model HR_System.Models.Admin
+
+@{
+    ViewData["Title"] = "login";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@*<h1>login</h1>
+
+<h4>Admin</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AdminName" class="control-label"></label>
+                <input asp-for="AdminName" class="form-control" />
+                <span asp-validation-for="AdminName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdminPass" class="control-label"></label>
+                <input asp-for="AdminPass" class="form-control" />
+                <span asp-validation-for="AdminPass" class="text-danger"></span>
+            </div>
+             <input type="checkbox" value="remberme"/>
+             <input type="checkbox" data-val="true" id="remberme" name="remberme" value="true">
+             <label>Remeber me</label>
+             
+            <div class="form-group">
+                <input type="submit" value="login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@
+
+
+@*---------------------------------------------*@
+  
+        <div class="box">
+          
+          <div class="square" style="--i:0;"></div>
+          <div class="square" style="--i:1;"></div>
+          <div class="square" style="--i:2;"></div>
+          <div class="square" style="--i:3;"></div>
+          <div class="square" style="--i:4;"></div>
+          <div class="square" style="--i:5;"></div>
+          
+
+		   
+            <div class="container"> 
+          <div class="form"> 
+         @*     <div class="text-center">
+                <img src="D:/ITI/Graduation_Project/HR_System/attach/logo.png">
+              </div>*@
+          
+
+            <h2>Hr System Login </h2>
+            <form method="post">
+              <div class="inputBx">
+                <input asp-for="AdminName" required="required">
+                <span>Login</span>
+              </div>
+
+
+              <div class="inputBx password">
+                <input id="password-input" asp-for="AdminPass" type="password" minlength="3" maxlength="12" required="required">
+                <span>Password</span>
+                <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+              </div>
+
+              <p class="text-danger">@ViewBag.status</p>
+
+              <label class="remember"><input type="checkbox" data-val="true" id="remberme" name="remberme" value="true">Remember Me </label>
+              <div class="inputBx">
+
+                <input type="submit" value="login"> 
+              </div>
+            </form>
+             
+            
+          </div>
+        </div>
+         
+          
+        </div>
+
+        
+
+
